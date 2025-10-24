@@ -1,0 +1,43 @@
+# Core dependencies
+streamlit>=1.28.0
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+
+# AI/ML dependencies
+ollama>=0.1.8
+openai-whisper>=20231117
+torch>=2.0.0
+transformers>=4.35.0
+sentence-transformers>=2.2.2
+
+# Vector database
+chromadb>=0.4.15
+numpy>=1.24.0
+
+# Document processing
+pypdf>=3.17.0
+python-docx>=1.1.0
+markdown>=3.5.0
+beautifulsoup4>=4.12.0
+
+# Text-to-speech (using lighter alternative)
+pyttsx3>=2.90
+librosa>=0.10.0
+soundfile>=0.12.0
+
+# HTTP client
+aiohttp>=3.9.0
+requests>=2.31.0
+
+# Data science
+pandas>=1.4.0,<2.0
+
+# Development dependencies
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Optional: GPU support (uncomment if using CUDA)
+# torch-audio>=2.0.0
+# torchvision>=0.15.0

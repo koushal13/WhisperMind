@@ -1,0 +1,44 @@
+# WhisperMind Configuration
+# This file contains the main configuration for the chatbot
+
+# Ollama LLM Configuration
+ollama:
+  base_url: "http://localhost:11434"
+  model: "llama3"  # Options: llama3, mistral, codellama, etc.
+  temperature: 0.7
+  max_tokens: 2048
+
+# ChromaDB Vector Store Configuration
+chromadb:
+  persist_directory: "models/chromadb"
+  collection_name: "documents"
+  embedding_model: "all-MiniLM-L6-v2"  # Sentence transformer model
+
+# RAG System Configuration
+rag:
+  top_k: 5  # Number of documents to retrieve
+  chunk_size: 1000  # Size of text chunks
+  chunk_overlap: 200  # Overlap between chunks
+  similarity_threshold: 0.7  # Minimum similarity for retrieval
+
+# Voice Processing Configuration
+voice:
+  enabled: true
+  whisper_model: "base"  # Options: tiny, base, small, medium, large
+  tts_engine: "pyttsx3"  # Using system TTS (pyttsx3)
+  tts_rate: 200  # Speech rate (words per minute)
+  tts_volume: 0.9  # Volume level (0.0 to 1.0)
+  audio_sample_rate: 16000
+
+# User Interface Configuration
+ui:
+  streamlit_host: "localhost"
+  streamlit_port: 8501
+  theme: "dark"
+  show_source_documents: true
+
+# Logging Configuration
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_path: null  # Set to "logs/whispermind.log" to enable file logging

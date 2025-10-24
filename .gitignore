@@ -1,0 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# Models and Data (these are large files)
+models/whisper/
+models/tts/
+models/embeddings/
+*.bin
+*.pt
+*.pth
+*.gguf
+*.safetensors
+
+# Logs
+logs/
+*.log
+
+# ChromaDB
+chroma_db/
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# Audio files (can be large)
+*.wav
+*.mp3
+*.flac
+*.ogg
+
+# Environment variables
+.env.local
+.env.production
