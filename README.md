@@ -33,9 +33,9 @@ https://private-user-images.githubusercontent.com/21079636/514573706-2dcbad40-33
 
 **Additional Features (Full Version):**
 - 📚 Document RAG capabilities (requires full setup)
-- 🎤 Voice interaction (Whisper STT + TTS) - *Code ready, needs dependencies*
+- 🎤 Voice interaction (Whisper STT + TTS) - *Fully working in minimal app!*
 
-> 📖 *See [DEMO.md](DEMO.md) for detailed feature highlights and use cases*
+> 📖 *See [DEMO.md](DEMO.md) for detailed feature highlights and [APP_GUIDE.md](APP_GUIDE.md) for choosing the right app version*
 
 ## ✨ Features
 
@@ -53,27 +53,29 @@ https://private-user-images.githubusercontent.com/21079636/514573706-2dcbad40-33
 
 ## 📊 Current Status
 
-### ✅ What Works Now (No Additional Setup)
-- **Basic AI Chat**: Immediate conversation with Ollama models
-- **Model Selection**: Choose from your installed Ollama models
-- **Simple Interface**: Clean web UI at `simple_streamlit_app.py`
-- **Privacy-First**: 100% offline operation
+### ✅ Ready to Use NOW (Voice Features Working)
+- **🚀 `whispermind_minimal.py`**: Complete voice-enabled AI chat
+- **🎤 Voice Input**: Working Whisper transcription
+- **🔊 Voice Output**: Working pyttsx3 text-to-speech
+- **🎛️ Audio Controls**: Toggle audio responses on/off
+- **🤖 AI Chat**: Immediate conversation with Ollama models
+- **🔒 Privacy-First**: 100% offline operation
 
-### 🔧 Advanced Features (Requires Full Setup)
-- **Document RAG**: Upload and query documents (needs `pip install -r requirements.txt`)
-- **Voice Interaction**: Speech input/output (code ready, needs Whisper + TTS dependencies)
-- **Advanced UI**: Full-featured interface with document management
-- **CLI Tools**: Command-line interface for power users
+### 🔧 Advanced Features (Full Setup Required)
+- **📚 Document RAG**: Upload and query documents (needs `pip install -r requirements.txt`)
+- **⚙️ Full Interface**: `whispermind_full_featured.py` with advanced features
+- **🖥️ CLI Tools**: Command-line interface for power users
+- **📄 Document Management**: Multi-format document processing
 
-*👆 The voice features are fully implemented in the codebase but require additional dependencies to run*
+*✨ Voice features are fully working and ready to use in the minimal app!*
 
 ## 🛠️ Tech Stack
 
 - **Language**: Python 3.8+
-- **LLM**: Ollama (Llama3, Mistral, CodeLlama)
+- **LLM**: Ollama (Llama3, Mistral, CodeLlama, Phi)
 - **Vector Database**: ChromaDB for document embeddings
-- **Speech-to-Text**: OpenAI Whisper
-- **Text-to-Speech**: Coqui TTS
+- **Speech-to-Text**: OpenAI Whisper (local processing)
+- **Text-to-Speech**: pyttsx3 (system voices)
 - **Web UI**: Streamlit
 - **Document Processing**: PyPDF, python-docx, BeautifulSoup4
 
@@ -91,24 +93,28 @@ WhisperMind/
 │   │   └── retriever.py         # Document retrieval
 │   ├── voice/             # Voice processing
 │   │   ├── speech_to_text.py    # Whisper STT
-│   │   └── text_to_speech.py    # Coqui TTS
+│   │   └── text_to_speech.py    # pyttsx3 TTS
 │   ├── ui/                # User interfaces
 │   │   └── streamlit_app.py     # Advanced Streamlit web UI
 │   └── chatbot.py         # Main chatbot class
 ├── data/                  # Your documents
 │   └── documents/         # Place your files here
-├── models/                # Downloaded models
 ├── config/                # Configuration files
 │   └── config.yaml        # Main configuration
+├── whispermind_minimal.py  # 🚀 MAIN APP - Clean daily-use interface
+├── whispermind_full_featured.py # Advanced features interface
 ├── launch.py              # Main launcher (cross-platform)
-├── simple_streamlit_app.py # Simple UI for quick testing
 ├── main.py               # CLI entry point
+├── simple_app.py          # Basic testing interface
 ├── requirements.txt       # Python dependencies
+├── APP_GUIDE.md           # Guide for choosing apps
 ├── DEMO.md               # Demo video and features
 └── README.md             # This file
 ```
 
 ## 🚀 Quick Start
+
+> 🎯 **Not sure which app to use?** Check [APP_GUIDE.md](APP_GUIDE.md) for a detailed comparison!
 
 ### Prerequisites
 
@@ -133,18 +139,21 @@ WhisperMind/
    ```bash
    # Download Ollama from https://ollama.com
    # Then pull a model (this may take a few minutes)
-   ollama pull llama3
+   ollama pull phi
+   # OR for larger model: ollama pull llama3
    ```
 
-4. **Quick Start with Simple Interface**
+4. **🚀 Launch WhisperMind (Recommended)**
    ```bash
-   # For immediate testing with basic features
-   python3 -m streamlit run simple_streamlit_app.py --server.port 8502
+   # Main app with voice features ready to use
+   python3 -m streamlit run whispermind_minimal.py --server.port 8509
    ```
 
-5. **Full Application Launch**
+5. **⚙️ Advanced Features (Optional)**
    ```bash
-   # For complete features including RAG and voice
+   # Full-featured app with document RAG
+   python3 -m streamlit run whispermind_full_featured.py --server.port 8507
+   # OR use the launcher
    python launch.py
    ```
 
@@ -156,29 +165,31 @@ WhisperMind/
 
 ### Usage
 
-#### Quick Start - Simple Interface
+#### 🚀 Main App - Voice-Enabled Chat (Recommended)
 
-For immediate testing with basic chat functionality (no additional dependencies needed):
+For complete voice-enabled AI chat (voice features work out of the box):
 
 ```bash
-python3 -m streamlit run simple_streamlit_app.py --server.port 8502
+python3 -m streamlit run whispermind_minimal.py --server.port 8509
 ```
 
-Then open your browser to `http://localhost:8502`
+Then open your browser to `http://localhost:8509`
 
-**Current Features:** Chat with Ollama models, model selection, conversation history
+**Features:** Voice input/output, audio controls, AI chat, clean interface
 
-#### Full Application - Advanced Features
+#### ⚙️ Advanced App - Full Features
 
-Launch with advanced features (requires `pip install -r requirements.txt`):
+Launch with document RAG and advanced features (requires `pip install -r requirements.txt`):
 
 ```bash
+python3 -m streamlit run whispermind_full_featured.py --server.port 8507
+# OR
 python launch.py
 ```
 
-Then open your browser to `http://localhost:8501`
+Then open your browser to `http://localhost:8507` (or 8501 with launch.py)
 
-**Additional Features:** Document RAG, voice interaction, advanced configuration
+**Additional Features:** Document RAG, advanced UI, document management
 
 #### Web Interface Features
 
@@ -250,10 +261,11 @@ rag:
 - Automatic language detection
 - High accuracy transcription
 
-### Text-to-Speech (Coqui TTS)
-- Natural-sounding voices
-- Multiple language support
-- Configurable speakers
+### Text-to-Speech (pyttsx3)
+- System native voices (Daniel, Alex, etc. on macOS)
+- Cross-platform compatibility
+- Configurable rate and volume
+- Zero-latency local processing
 
 ## 🔧 Advanced Usage
 
@@ -261,16 +273,18 @@ rag:
 
 WhisperMind offers flexible usage options:
 
-1. **Simple Interface** (`simple_streamlit_app.py`):
-   - Quick testing and basic chat
-   - Minimal dependencies
-   - Fast startup
+1. **🚀 Minimal Interface** (`whispermind_minimal.py`) - **RECOMMENDED**:
+   - Voice-enabled AI chat ready to use
+   - Clean, simple interface
+   - Audio input/output controls
+   - Fast startup, works immediately
 
-2. **Full Interface** (`launch.py`):
+2. **⚙️ Full Interface** (`whispermind_full_featured.py`):
+   - Everything from minimal PLUS:
    - Complete RAG functionality
-   - Voice features
    - Document management
-   - Advanced settings
+   - Advanced settings and controls
+   - Requires full dependency installation
 
 ### Custom Ollama Models
 
