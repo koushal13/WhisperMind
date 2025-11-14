@@ -1,5 +1,8 @@
 """
-Enhanced Streamlit app with voice capabilities for WhisperMind.
+WhisperMind - Enhanced Full-Featured Voice-Enabled AI Chatbot
+
+Author: koushal13 (https://github.com/koushal13)
+Repository: https://github.com/koushal13/WhisperMind
 """
 
 import streamlit as st

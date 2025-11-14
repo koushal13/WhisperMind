@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
 WhisperMind - Clean & Simple Voice-Enabled AI Chatbot
+
+Author: koushal13 (https://github.com/koushal13)
+Repository: https://github.com/koushal13/WhisperMind
 """
 
 import streamlit as st
