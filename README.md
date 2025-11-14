@@ -408,3 +408,6 @@ This project is open source. Feel free to use, modify, and distribute.
 ---
 
 **Happy chatting with WhisperMind! 🧠💬**
+
+---
+*Repository: https://github.com/koushal13/WhisperMind*
