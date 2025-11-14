@@ -4,9 +4,24 @@ A privacy-first, offline AI chatbot that combines the power of Ollama's local la
 
 ## 🎥 Demo
 
-**[🎬 Watch WhisperMind in Action](https://private-user-images.githubusercontent.com/21079636/514486577-2bb9d392-1953-437e-b829-0a7785c3a952.mov?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjMxMzQzOTQsIm5iZiI6MTc2MzEzNDA5NCwicGF0aCI6Ii8yMTA3OTYzNi81MTQ0ODY1NzctMmJiOWQzOTItMTk1My00MzdlLWI4MjktMGE3Nzg1YzNhOTUyLm1vdj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTE0VDE1MjgxNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWIzMmE3YmM2NmQzYjA0ZWYyNTA2Y2U3MjgwYmVkOGY1ODRiM2Q1NThhMWI2MzQ1ZTVhZGYyODQ0YWJmM2IzMTYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.BPuPlxkc8ijTFR7IKRuWU78LLUCff4nvpPpn35ymzSM)** - See the full demo showcasing document RAG, voice interaction, and privacy-first AI chat
+### Watch WhisperMind in Action
 
-> *See [DEMO.md](DEMO.md) for detailed demo information and feature highlights*
+<div align="center">
+
+https://github.com/user-attachments/assets/2bb9d392-1953-437e-b829-0a7785c3a952
+
+*🎬 Full demo showcasing document RAG, voice interaction, and privacy-first AI chat*
+
+</div>
+
+**Key Features Demonstrated:**
+- 🔒 **100% Offline Operation** - No data leaves your machine
+- 📚 **Document RAG** - Query your local knowledge base with AI
+- 🎤 **Voice Interaction** - Natural speech-to-text and text-to-speech
+- 💬 **Smart Chat Interface** - Contextual responses with source references
+- ⚡ **Fast Performance** - Optimized local inference with Ollama
+
+> 📖 *See [DEMO.md](DEMO.md) for detailed feature highlights and use cases*
 
 ## ✨ Features
 
