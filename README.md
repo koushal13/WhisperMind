@@ -8,9 +8,17 @@ A privacy-first, offline AI chatbot that combines the power of Ollama's local la
 
 <div align="center">
 
+**🎬 Demo Video 1 - Core Chat Features**
+
 https://github.com/user-attachments/assets/2bb9d392-1953-437e-b829-0a7785c3a952
 
-*🎬 Full demo showcasing document RAG, voice interaction, and privacy-first AI chat*
+*Full demo showcasing document RAG, voice interaction, and privacy-first AI chat*
+
+**🎬 Demo Video 2 - Enhanced Voice Features**
+
+https://private-user-images.githubusercontent.com/21079636/514573706-2dcbad40-33bb-4a3b-bbed-318f38ef8991.mov?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjMxNDY5NzIsIm5iZiI6MTc2MzE0NjY3MiwicGF0aCI6Ii8yMTA3OTYzNi81MTQ1NzM3MDYtMmRjYmFkNDAtMzNiYi00YTNiLWJiZWQtMzE4ZjM4ZWY4OTkxLm1vdj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTE0VDE4NTc1MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWU0NWExNzlhNTkyZTNhNTRlZGFiNDQ5OWI1NjAwODg5YjkzMmM4N2QzMGQ1ZTgzNjM4NmRkZGRlMzAxNDJmZWEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.rm_DabHX3to2AqadUU9XAlZN8crRKEtLlJjlhdy6eb8
+
+*Enhanced voice features with audio controls and speech toggle functionality*
 
 </div>
 
@@ -20,6 +28,8 @@ https://github.com/user-attachments/assets/2bb9d392-1953-437e-b829-0a7785c3a952
 - 🤖 **Multiple LLM Support** - Compatible with various Ollama models
 - ⚡ **Fast Performance** - Optimized local inference with minimal latency
 - 🎯 **Easy Setup** - Quick start with simple interface
+- 🎤 **Voice Input & Output** - Speech-to-text with Whisper & controllable TTS
+- 🔊 **Audio Controls** - Toggle audio responses on/off with radio buttons
 
 **Additional Features (Full Version):**
 - 📚 Document RAG capabilities (requires full setup)
