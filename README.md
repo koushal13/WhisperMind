@@ -2,16 +2,25 @@
 
 A privacy-first, offline AI chatbot that combines the power of Ollama's local language models with Retrieval Augmented Generation (RAG) and voice capabilities. WhisperMind can answer questions from your personal documents and interact with you through voice, all while keeping your data completely private and offline.
 
+## 🎥 Demo
+
+**[🎬 Watch WhisperMind in Action](https://private-user-images.githubusercontent.com/21079636/514486577-2bb9d392-1953-437e-b829-0a7785c3a952.mov?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjMxMzQzOTQsIm5iZiI6MTc2MzEzNDA5NCwicGF0aCI6Ii8yMTA3OTYzNi81MTQ0ODY1NzctMmJiOWQzOTItMTk1My00MzdlLWI4MjktMGE3Nzg1YzNhOTUyLm1vdj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTE0VDE1MjgxNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWIzMmE3YmM2NmQzYjA0ZWYyNTA2Y2U3MjgwYmVkOGY1ODRiM2Q1NThhMWI2MzQ1ZTVhZGYyODQ0YWJmM2IzMTYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.BPuPlxkc8ijTFR7IKRuWU78LLUCff4nvpPpn35ymzSM)** - See the full demo showcasing document RAG, voice interaction, and privacy-first AI chat
+
+> *See [DEMO.md](DEMO.md) for detailed demo information and feature highlights*
+
 ## ✨ Features
 
-- **🔒 Privacy-First**: Runs entirely offline - no cloud dependencies
-- **📚 RAG-Powered**: Answer questions from your local documents
-- **🎤 Voice Input**: Speech-to-text using OpenAI Whisper
-- **🔊 Voice Output**: Text-to-speech using Coqui TTS
-- **🌐 Web Interface**: Beautiful Streamlit-based UI
-- **💻 CLI Support**: Command-line interface for power users
-- **📄 Multi-Format**: Supports PDF, DOCX, TXT, MD, HTML files
-- **🚀 Local Models**: Powered by Ollama (Llama3, Mistral, etc.)
+- **🔒 100% Privacy-First**: Runs entirely offline - no cloud dependencies, no data tracking
+- **📚 Smart Document RAG**: Answer questions from your local documents with AI-powered search
+- **🎤 Voice Input**: Natural speech-to-text using OpenAI Whisper
+- **🔊 Voice Output**: High-quality text-to-speech responses
+- **🌐 Beautiful Web Interface**: Intuitive Streamlit-based UI with real-time chat
+- **💻 CLI Support**: Command-line interface for developers and power users
+- **📄 Multi-Format Support**: Works with PDF, DOCX, TXT, MD, HTML files
+- **🚀 Local LLM Power**: Powered by Ollama (Llama3, Mistral, CodeLlama, etc.)
+- **⚡ Fast & Efficient**: Optimized for local inference with smart caching
+- **🔧 Highly Configurable**: Customize models, voice settings, and RAG parameters
+- **🌍 Cross-Platform**: Works seamlessly on macOS, Linux, and Windows
 
 ## 🛠️ Tech Stack
 
@@ -39,15 +48,18 @@ WhisperMind/
 │   │   ├── speech_to_text.py    # Whisper STT
 │   │   └── text_to_speech.py    # Coqui TTS
 │   ├── ui/                # User interfaces
-│   │   └── streamlit_app.py     # Streamlit web UI
+│   │   └── streamlit_app.py     # Advanced Streamlit web UI
 │   └── chatbot.py         # Main chatbot class
 ├── data/                  # Your documents
 │   └── documents/         # Place your files here
 ├── models/                # Downloaded models
 ├── config/                # Configuration files
 │   └── config.yaml        # Main configuration
-├── requirements.txt       # Python dependencies
+├── launch.py              # Main launcher (cross-platform)
+├── simple_streamlit_app.py # Simple UI for quick testing
 ├── main.py               # CLI entry point
+├── requirements.txt       # Python dependencies
+├── DEMO.md               # Demo video and features
 └── README.md             # This file
 ```
 
@@ -61,10 +73,10 @@ WhisperMind/
 
 ### Installation
 
-1. **Clone or download the project**
+1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd Silent-Canoe-WhisperMind
+   git clone https://github.com/koushal13/WhisperMind.git
+   cd WhisperMind
    ```
 
 2. **Install Python dependencies**
@@ -79,13 +91,19 @@ WhisperMind/
    ollama pull llama3
    ```
 
-4. **Copy environment configuration**
+4. **Quick Start with Simple Interface**
    ```bash
-   cp .env.example .env
-   # Edit .env if needed
+   # For immediate testing with basic features
+   python3 -m streamlit run simple_streamlit_app.py --server.port 8502
    ```
 
-5. **Add your documents**
+5. **Full Application Launch**
+   ```bash
+   # For complete features including RAG and voice
+   python launch.py
+   ```
+
+6. **Add your documents (optional)**
    ```bash
    # Place your documents in data/documents/
    # Supported formats: PDF, DOCX, TXT, MD, HTML
@@ -93,35 +111,53 @@ WhisperMind/
 
 ### Usage
 
-#### Web Interface (Recommended)
+#### Quick Start - Simple Interface
 
-Launch the beautiful Streamlit web interface:
+For immediate testing and basic chat functionality:
 
 ```bash
-python main.py --ui
+python3 -m streamlit run simple_streamlit_app.py --server.port 8502
+```
+
+Then open your browser to `http://localhost:8502`
+
+#### Full Application - Complete Features
+
+Launch with all advanced features (RAG, voice, document processing):
+
+```bash
+python launch.py
 ```
 
 Then open your browser to `http://localhost:8501`
 
+#### Web Interface Features
+
+- **Real-time Chat**: Instant responses with message history
+- **Document Upload**: Drag & drop files to add to knowledge base
+- **Voice Controls**: Enable microphone input and audio responses
+- **Model Selection**: Choose from available Ollama models
+- **Settings Panel**: Customize temperature, tokens, and RAG parameters
+
 #### Command Line Interface
 
-For a simple CLI chat experience:
+For developers and CLI enthusiasts:
 
 ```bash
 python main.py
 ```
 
-#### Load Documents Only
+#### Document Processing Only
 
-To process documents without starting chat:
+To index documents without starting chat:
 
 ```bash
 python main.py --load-docs data/documents
 ```
 
-#### Test the System
+#### System Test
 
-Run a quick test to verify everything works:
+Verify your installation:
 
 ```bash
 python main.py --test
@@ -171,6 +207,21 @@ rag:
 - Configurable speakers
 
 ## 🔧 Advanced Usage
+
+### Multiple Interfaces
+
+WhisperMind offers flexible usage options:
+
+1. **Simple Interface** (`simple_streamlit_app.py`):
+   - Quick testing and basic chat
+   - Minimal dependencies
+   - Fast startup
+
+2. **Full Interface** (`launch.py`):
+   - Complete RAG functionality
+   - Voice features
+   - Document management
+   - Advanced settings
 
 ### Custom Ollama Models
 

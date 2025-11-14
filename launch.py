@@ -28,7 +28,19 @@ def start_ollama():
 
 def launch_streamlit():
     """Launch Streamlit app."""
-    python_path = Path(__file__).parent / ".venv" / "Scripts" / "python.exe"
+    # Try virtual environment first, fall back to system Python
+    if sys.platform == "win32":
+        venv_python = Path(__file__).parent / ".venv" / "Scripts" / "python.exe"
+    else:
+        venv_python = Path(__file__).parent / ".venv" / "bin" / "python"
+    
+    # Use virtual environment if it exists, otherwise use current Python
+    if venv_python.exists():
+        python_path = str(venv_python)
+    else:
+        python_path = sys.executable
+        print("⚠️  Virtual environment not found, using system Python")
+    
     app_path = Path(__file__).parent / "src" / "ui" / "streamlit_app.py"
     
     print("🌐 Launching WhisperMind web interface...")
@@ -37,7 +49,7 @@ def launch_streamlit():
     
     try:
         subprocess.run([
-            str(python_path), "-m", "streamlit", "run", 
+            python_path, "-m", "streamlit", "run", 
             str(app_path),
             "--server.port", "8501",
             "--server.address", "localhost"
