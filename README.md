@@ -16,10 +16,14 @@ https://github.com/user-attachments/assets/2bb9d392-1953-437e-b829-0a7785c3a952
 
 **Key Features Demonstrated:**
 - 🔒 **100% Offline Operation** - No data leaves your machine
-- 📚 **Document RAG** - Query your local knowledge base with AI
-- 🎤 **Voice Interaction** - Natural speech-to-text and text-to-speech
-- 💬 **Smart Chat Interface** - Contextual responses with source references
-- ⚡ **Fast Performance** - Optimized local inference with Ollama
+- 💬 **Smart Chat Interface** - Real-time conversations with local AI models
+- 🤖 **Multiple LLM Support** - Compatible with various Ollama models
+- ⚡ **Fast Performance** - Optimized local inference with minimal latency
+- 🎯 **Easy Setup** - Quick start with simple interface
+
+**Additional Features (Full Version):**
+- 📚 Document RAG capabilities (requires full setup)
+- 🎤 Voice interaction (Whisper STT + TTS) - *Code ready, needs dependencies*
 
 > 📖 *See [DEMO.md](DEMO.md) for detailed feature highlights and use cases*
 
@@ -27,8 +31,8 @@ https://github.com/user-attachments/assets/2bb9d392-1953-437e-b829-0a7785c3a952
 
 - **🔒 100% Privacy-First**: Runs entirely offline - no cloud dependencies, no data tracking
 - **📚 Smart Document RAG**: Answer questions from your local documents with AI-powered search
-- **🎤 Voice Input**: Natural speech-to-text using OpenAI Whisper
-- **🔊 Voice Output**: High-quality text-to-speech responses
+- **🎤 Voice Input**: Speech-to-text using OpenAI Whisper *(requires dependencies)*
+- **🔊 Voice Output**: Text-to-speech responses *(requires dependencies)*
 - **🌐 Beautiful Web Interface**: Intuitive Streamlit-based UI with real-time chat
 - **💻 CLI Support**: Command-line interface for developers and power users
 - **📄 Multi-Format Support**: Works with PDF, DOCX, TXT, MD, HTML files
@@ -36,6 +40,22 @@ https://github.com/user-attachments/assets/2bb9d392-1953-437e-b829-0a7785c3a952
 - **⚡ Fast & Efficient**: Optimized for local inference with smart caching
 - **🔧 Highly Configurable**: Customize models, voice settings, and RAG parameters
 - **🌍 Cross-Platform**: Works seamlessly on macOS, Linux, and Windows
+
+## 📊 Current Status
+
+### ✅ What Works Now (No Additional Setup)
+- **Basic AI Chat**: Immediate conversation with Ollama models
+- **Model Selection**: Choose from your installed Ollama models
+- **Simple Interface**: Clean web UI at `simple_streamlit_app.py`
+- **Privacy-First**: 100% offline operation
+
+### 🔧 Advanced Features (Requires Full Setup)
+- **Document RAG**: Upload and query documents (needs `pip install -r requirements.txt`)
+- **Voice Interaction**: Speech input/output (code ready, needs Whisper + TTS dependencies)
+- **Advanced UI**: Full-featured interface with document management
+- **CLI Tools**: Command-line interface for power users
+
+*👆 The voice features are fully implemented in the codebase but require additional dependencies to run*
 
 ## 🛠️ Tech Stack
 
@@ -128,7 +148,7 @@ WhisperMind/
 
 #### Quick Start - Simple Interface
 
-For immediate testing and basic chat functionality:
+For immediate testing with basic chat functionality (no additional dependencies needed):
 
 ```bash
 python3 -m streamlit run simple_streamlit_app.py --server.port 8502
@@ -136,15 +156,19 @@ python3 -m streamlit run simple_streamlit_app.py --server.port 8502
 
 Then open your browser to `http://localhost:8502`
 
-#### Full Application - Complete Features
+**Current Features:** Chat with Ollama models, model selection, conversation history
 
-Launch with all advanced features (RAG, voice, document processing):
+#### Full Application - Advanced Features
+
+Launch with advanced features (requires `pip install -r requirements.txt`):
 
 ```bash
 python launch.py
 ```
 
 Then open your browser to `http://localhost:8501`
+
+**Additional Features:** Document RAG, voice interaction, advanced configuration
 
 #### Web Interface Features
 

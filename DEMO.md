@@ -18,12 +18,17 @@ https://github.com/user-attachments/assets/2bb9d392-1953-437e-b829-0a7785c3a952
 
 The demo showcases:
 
-### 🎯 Core Features
+### 🎯 Core Features (Currently Working)
 - **Local AI Chat**: Privacy-first conversations with Ollama models
-- **Document RAG**: Query your local documents with AI-powered search
-- **Voice Input**: Speech-to-text using Whisper
-- **Voice Output**: Text-to-speech responses
-- **Streamlit UI**: Clean, intuitive web interface
+- **Model Selection**: Choose from available local models
+- **Fast Response**: Optimized for local inference
+- **Simple Interface**: Clean, intuitive web interface
+
+### 🚀 Advanced Features (Available with Full Setup)
+- **Document RAG**: Query your local documents with AI-powered search *(requires dependencies)*
+- **Voice Input**: Speech-to-text using Whisper *(code implemented, needs setup)*
+- **Voice Output**: Text-to-speech responses *(code implemented, needs setup)*
+- **Document Processing**: Multi-format document support *(requires dependencies)*
 
 ### 🔒 Privacy & Security
 - **100% Offline**: No data leaves your machine

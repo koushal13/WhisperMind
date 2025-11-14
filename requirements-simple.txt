@@ -1,0 +1,13 @@
+# Minimal requirements for voice-enabled simple app
+streamlit>=1.28.0
+requests>=2.31.0
+
+# Voice processing (optional - app works without these)
+speechrecognition>=3.10.0
+pyttsx3>=2.90
+pyaudio>=0.2.11
+
+# Alternative for pyaudio installation issues:
+# On macOS: brew install portaudio && pip install pyaudio
+# On Ubuntu: sudo apt-get install python3-pyaudio
+# On Windows: pip install pyaudio should work
